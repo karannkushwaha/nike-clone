@@ -1,7 +1,13 @@
+import { services } from "../constants/index";
+import ServiceCard from "../components/ServiceCard";
 const Services = () => {
   return (
     <>
-      <div>Services</div>
+      <section className="maxx-container flex justify-center flex-wrap gap-9">
+        {services.map((items) => (
+          <ServiceCard key={items.label} {...items} />
+        ))}
+      </section>
     </>
   );
 };
